@@ -39,5 +39,32 @@ function findSum() {
     let sum = parseFloat(num1) + parseFloat(num2);
   
         document.getElementById("sumOutput").textContent = sum;
+
     
+}
+
+
+function setWordText() {
+    
+    let userInput = document.getElementById("anything").value;
+    let length = userInput.length;
+
+    console.log("Length: " + length);
+    
+   
+    document.getElementById("wordLength").textContent = length;
+}
+
+
+function togglePassword() {
+    let passwordInput = document.getElementById("password");
+    let checkbox = document.getElementById("showPasswordCheckbox");
+
+    // if click checkbox it will show thw password
+    // else it will changed to *
+    if (checkbox.checked) {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
 }

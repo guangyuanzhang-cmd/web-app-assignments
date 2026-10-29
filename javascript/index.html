@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Examples</title>
 </head>
+
 <body>
 
     <!-- Example 1: Dynamic Greeting -->
-    <h3>Example 1: Dynamic Greeting</h3> 
+    <h3>Example 1: Dynamic Greeting</h3>
     <div id="greetingOutput"></div>
-    
+
 
     <!-- Example 2 & 3: Button Clicks -->
     <h3>Example 2 & 3: Button Actions</h3>
     <button onclick="setButtonText()">Click me</button>
     <button onclick="setTimeText()">Click me To see the time</button>
     <div id="buttonClicktext"></div>
-    
+
 
     <!-- Example 4: Sum of Two Numbers -->
     <h3>Example 4: Find Sum</h3>
@@ -34,7 +36,24 @@
     <button onclick="findSum()">Find Sum</button>
     <h4>Result: <span id="sumOutput"></span></h4>
 
+    <!-- Example 5: Click "try it" to get length of the text-->
+    <h3>Example 5: Find length</h3>
+    <input type="anything" id="anything" placeholder="Enter anything">
+    <button onclick="setWordText()"> Try it </button>
+    <h4>Length: <span id="wordLength"></span></h4>
+
+
+    <!-- Example 6: hide and show the password-->
+    <h3>Example 6: show and hide Password</h3>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your Password">
+
+    <!-- Checkbox -->
+    <input type="checkbox" id="showPasswordCheckbox" onclick="togglePassword()">
+    <label for="showPasswordCheckbox">Show password</label>
     
+
     <script src="script.js"></script>
 </body>
+
 </html>

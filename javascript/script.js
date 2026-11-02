@@ -22,7 +22,7 @@ window.onload = function () {
 
 // Renamed to handle the first button
 function setButtonText() {
-    document.getElementById("buttonClicktext").textContent = "Hello world "; 
+    document.getElementById("buttonClicktext").textContent = "Hello world ";
 }
 
 // Renamed to handle the second button
@@ -31,27 +31,27 @@ function setTimeText() {
 }
 
 function findSum() {
-    
+
     let num1 = document.getElementById("number1").value;
     let num2 = document.getElementById("number2").value;
 
-    
-    let sum = parseFloat(num1) + parseFloat(num2);
-  
-        document.getElementById("sumOutput").textContent = sum;
 
-    
+    let sum = parseFloat(num1) + parseFloat(num2);
+
+    document.getElementById("sumOutput").textContent = sum;
+
+
 }
 
 
 function setWordText() {
-    
+
     let userInput = document.getElementById("anything").value;
     let length = userInput.length;
 
     console.log("Length: " + length);
-    
-   
+
+
     document.getElementById("wordLength").textContent = length;
 }
 
@@ -66,5 +66,37 @@ function togglePassword() {
         passwordInput.type = "text";
     } else {
         passwordInput.type = "password";
+    }
+}
+
+function changeText() {
+    const inputElement = document.getElementById("changeText");
+
+
+    const fonts = ["Arial", "Courier New", "Georgia", "Times New Roman", "Verdana"];
+    const sizes = ["16px", "20px", "24px", "28px", "32px"];
+    const colors = ["red", "blue", "green", "purple", "orange"];
+
+
+    const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+    const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+    inputElement.style.fontFamily = randomFont;
+    inputElement.style.fontSize = randomSize;
+    inputElement.style.color = randomColor;
+}
+
+function display() {
+    const inputElement = document.getElementById("hideOrShow");
+
+
+    if (inputElement.style.display === "none") {
+
+        inputElement.style.display = "block";
+    } else {
+
+        inputElement.style.display = "none";
     }
 }

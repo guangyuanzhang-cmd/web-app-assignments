@@ -72,31 +72,37 @@ function togglePassword() {
 function changeText() {
     const inputElement = document.getElementById("changeText");
 
-
+   //array containing different fonts sizes and colors
     const fonts = ["Arial", "Courier New", "Georgia", "Times New Roman", "Verdana"];
     const sizes = ["16px", "20px", "24px", "28px", "32px"];
     const colors = ["red", "blue", "green", "purple", "orange"];
 
-
+   // Generate a random index and select a font /size /color from the sizes array
     const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
     const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-
+   // Change the input element's font to the randomly selected font size and color
     inputElement.style.fontFamily = randomFont;
     inputElement.style.fontSize = randomSize;
     inputElement.style.color = randomColor;
 }
 
+// Create a function called display to show or hide an element
 function display() {
+
+    // Find the HTML element with the ID "hideOrShow"
     const inputElement = document.getElementById("hideOrShow");
 
-
+    // Check if the element is currently hidden
     if (inputElement.style.display === "none") {
 
+        // If hidden, show the element
         inputElement.style.display = "block";
+
     } else {
 
+        // Otherwise, hide the element
         inputElement.style.display = "none";
     }
 }
